@@ -8,7 +8,7 @@
     Call the array 'myArr'.
 */
 
-//CODE HERE
+var myArr = [4, "abc", ["cat", "dog", "bird"], 77]  //CODE HERE
 
 
 ////////////////////PROBLEM 2////////////////////
@@ -20,7 +20,7 @@
 
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
-//CODE HERE
+const foundZ = nestedLetters[5][2][1]  //CODE HERE
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -36,7 +36,7 @@ const savannah = ['lion', 'zebra', 'lion', 'giraffe']
 const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
+let animals = [...forest, ...ocean, ...savannah, ...desert]  //CODE HERE
 
 
 /*
@@ -44,7 +44,8 @@ const desert = ['rattlesnake', 'coyote']
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
 */
 
-//CODE HERE
+let animalsCopy = {...animals} 
+    //CODE HERE
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -54,6 +55,11 @@ const desert = ['rattlesnake', 'coyote']
     The function should return the bigger number. 
     If the numbers are the same, just return the number.
 */
+
+let compareNums = (num1, num2) => {
+    return num1 >= num2;
+}
+
 
 //CODE HERE
 
@@ -67,13 +73,18 @@ const desert = ['rattlesnake', 'coyote']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+bestMovie = () => val + "is the best movie ever!"  //CODE HERE
   
   
 ////////////////////PROBLEM 6////////////////////
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
+
+jsNinja = () => {
+    return 'I am a JavaScript ninja!';
+  }
+
 
 //CODE HERE
   
@@ -95,6 +106,8 @@ const desert = ['rattlesnake', 'coyote']
     You don't agree with whowever rated Splendor,
     delete the rating property off of the gameInfo object.
 */
+
+delete gameInfo.rating 
 
 //CODE HERE
   
@@ -193,7 +206,12 @@ let pairsArray = []
     Those values should come from the functions parameters: name, age, breed, tricks (in order).
 */
 
-//CODE HERE
+function Dog (name, age, breed, tricks){
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
+}   //CODE HERE
 
 
 /*
@@ -202,7 +220,7 @@ let pairsArray = []
     Store the result in a variable called 'fido'.
 */
 
-//CODE HERE
+var fido = new Dog("Fido", 3, "Jack Russell", ["sit", "shake"])   //CODE HERE
   
 
 ////////////////////PROBLEM 12////////////////////
@@ -212,6 +230,12 @@ let pairsArray = []
     NAME will come from that context, so you should reference 'this.name' to get the correct name.
 */
 
+var bark = {
+    fullName: function(name) {
+      return this.name + "says bark!" ;
+    }
+  }
+
 //CODE HERE
 
 
@@ -220,7 +244,7 @@ let pairsArray = []
     and saving the result to a variable called fidoSpeak.
 */
 
-//CODE HERE
+var fidoSpeak = {} //CODE HERE
   
   
 ////////////////////PROBLEM 13////////////////////
@@ -269,6 +293,13 @@ let pairsArray = []
     Those values should come from the function's parameters: brand, model, storage, color, sold (in order).
 */
 
+function Phone (brand, model, storage, color, sold){
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.sold = sold;
+}
+
 //CODE HERE
 
   
@@ -284,11 +315,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-  // let phone1 = 
+   let phone1 = new Phone ("Apple", "iPhone", 60, "white" , false)
   
-  // let phone2 = 
+  let phone2 = new Phone ("Samsung", "droid", 120, "silver", false)
   
-  // let phone3 = 
+  let phone3 = new Phone ("Google", "Pixel", 250, "red", false)
   
 /*
     Last, add a prototype method to Phone.
