@@ -80,7 +80,9 @@ const products = [
   Save the copy to a new variable called 'saleProducts'.
 */
 
-//CODE HERE
+
+  
+  //CODE HERE
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -90,7 +92,7 @@ const products = [
   (Hint: look up the array method 'includes' on MDN)
 */
 
-//CODE HERE
+ //CODE HERE
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -129,6 +131,10 @@ const shippingInfo = {
   that combines the contactInfo and shippingInfo objects.
 */
 
+let helensInfo = Object.assign({}, shippingInfo, contactInfo);
+console.log(helensInfo);
+ 
+
 //CODE HERE
 
 ////////////////////PROBLEM 6////////////////////
@@ -138,14 +144,15 @@ const shippingInfo = {
   Overwrite the name property to 'Ellen' and the email address to 'ellen@email.com'.
 */
 
-//CODE HERE
+let ellensInfo = {...helensInfo, name: "Ellen", email: "ellen@email.com"} 
+console.log(ellensInfo)    //CODE HERE
 
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
-//CODE HERE
+
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -250,7 +257,14 @@ const userInfo = {
       - create at least 2 kid objects
 */
 
-//CODE HERE
+let person = {
+  name: "Travis",
+  age: 33,
+  jobs: ["machinist", "credit manager", "operations manager"],
+  birthday: 2,
+  favorites: 3,
+}
+  //CODE HERE
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -276,7 +290,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+ let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -289,6 +303,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+ let context2 = window
 //let context2 = global
 //let context2 = workout

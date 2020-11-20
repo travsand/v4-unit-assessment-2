@@ -25,7 +25,7 @@ const foundZ = nestedLetters[5][2][1]  //CODE HERE
 
 ////////////////////PROBLEM 3////////////////////
 /*
-    Use the spread operator to combine the following arrays into one array.
+    Use the spread operator to combine the following arrays into one array.f
     Name the new array 'animals'.
 */
 
